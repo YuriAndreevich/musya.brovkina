@@ -1,0 +1,39 @@
+.reviewCard {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  align-items: center;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.textContent {
+  max-width: 600px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.review {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
