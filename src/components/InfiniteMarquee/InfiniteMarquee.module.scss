@@ -1,0 +1,39 @@
+.itemsWrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 20px;
+}
+
+.items {
+  display: flex;
+  gap: 100px;
+  flex-shrink: 0;
+}
+
+.item {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  transition: transform 0.1s ease-in-out;
+  text-transform: uppercase;
+  font-size: 160px;
+}
+
+
+.marquee {
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

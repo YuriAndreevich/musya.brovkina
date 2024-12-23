@@ -1,0 +1,108 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navLinks li {
+    font-size: 1rem;
+    position: relative; /* Для позиционирования подменю */
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .navLinks a:hover {
+    color: #b86e6e; 
+  }
+  
+  .bookButton {
+    padding: 8px 16px;
+    background-color: #b86e6e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .bookButton:hover {
+    background-color: #9e5c5c;
+  }
+  
+  /* Стрелочка, которая появляется после наведения на услугу */
+  .arrow {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+  }
+  
+  .navItem:hover .arrow {
+    transform: translateY(2px); /* Стрелочка немного смещается вниз */
+  }
+  
+  /* Панель с услугами (будет фиксированная по всей ширине экрана) */
+  .servicesPanel {
+    position: fixed;
+    top: 100%; /* Появляется сразу под навигацией */
+    left: 0;
+    width: 100vw; /* Занимает всю ширину экрана */
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navItem:hover .servicesPanel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .servicesPanel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .servicesPanel li {
+    font-size: 1rem;
+  }
+  
+  .servicesPanel a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .servicesPanel a:hover {
+    color: #b86e6e;
+  }
+  

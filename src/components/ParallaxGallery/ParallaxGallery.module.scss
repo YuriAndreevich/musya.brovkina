@@ -1,0 +1,95 @@
+/* Контейнер галереи */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100vh;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    scroll-behavior: smooth; /* Плавный скроллинг */
+  }
+  
+  /* Секции */
+  .section {
+    scroll-behavior: smooth;
+    width: 33.33%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Контейнер для изображений */
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Изображения */
+  .imageItem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Стиль для вертикальных изображений */
+  .imageItem.vertical {
+    height: auto;
+  }
+  
+  /* Стиль для горизонтальных изображений */
+  .imageItem.horizontal {
+    width: auto;
+  }
+  
+  /* Обычные стили для изображений */
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Анимация для бесконечной прокрутки изображений */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); /* Начальное положение */
+    }
+    100% {
+      transform: translateX(-100%); /* Конечное положение (сдвиг на 100%) */
+    }
+  }
+  
+  /* Анимация для цикличности изображения по вертикали */
+  @keyframes moveImage {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Медиа-запросы для мобильных устройств */
+  @media (max-width: 768px) {
+    .gallery {
+      flex-direction: column;
+    }
+  
+    .section {
+      width: 100%;
+      height: auto;
+    }
+  
+    .imageWrapper {
+      height: 100%;
+    }
+  }
+  
